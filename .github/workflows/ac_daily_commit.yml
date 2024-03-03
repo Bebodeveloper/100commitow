@@ -30,6 +30,7 @@ jobs:
         run: |
           git pull
           echo "Another day another commit" >> commit.txt
+          git pull
           git add commit.txt
           git commit -m "Automated daily commit"
           git push
