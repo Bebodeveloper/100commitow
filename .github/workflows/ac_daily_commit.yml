@@ -20,6 +20,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           token: ${{ secrets.TOKEN_AC_100_COMMITS }}
+          pull: true
 
       - name: Set Up Git
         run: |
@@ -28,9 +29,7 @@ jobs:
 
       - name: Make Commit
         run: |
-          git pull
           echo "Another day another commit" >> commit.txt
-          git pull
           git add commit.txt
           git commit -m "Automated daily commit"
           git push
