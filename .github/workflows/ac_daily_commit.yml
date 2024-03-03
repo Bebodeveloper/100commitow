@@ -2,12 +2,15 @@ name: Daily Commit
 
 on:
   schedule:
-    - cron: '32 12 * * *' # Runs every day at 3:15 PM UTC
+    - cron: '37 11 * * *' # Runs every day at 3:15 PM UTC
 
 jobs:
   commit:
     runs-on: self-hosted
-
+    strategy:
+      matrix:
+        os: [windows-latest]
+        
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
