@@ -5,7 +5,7 @@ on:
     - cron: '0 14 * * *' # Runs every day at 3:15 PM UTC
 
 jobs:
-  commit:
+  ac_daily_commit:
     runs-on: self-hosted
     strategy:
       matrix:
