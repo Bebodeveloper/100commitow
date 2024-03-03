@@ -1,11 +1,8 @@
 name: Daily Commit
 
 on:
-  push:
-    branches:
-      - main
   schedule:
-    - cron: '0 14 * * *' # Runs every day at 3:15 PM UTC
+    - cron: '12 17 * * *' # Runs every day at 3:15 PM UTC
 
 jobs:
   ac_daily_commit:
