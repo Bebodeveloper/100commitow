@@ -28,6 +28,7 @@ jobs:
 
       - name: Make Commit
         run: |
+          git pull
           echo "Another day another commit" >> commit.txt
           git add commit.txt
           git commit -m "Automated daily commit"
