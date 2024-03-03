@@ -12,6 +12,10 @@ jobs:
         os: [windows-latest]
         
     steps:
+      - name: powershell allow
+        shell: cmd
+        run: powershell -Command "Set-ExecutionPolicy RemoteSigned -Scope CurrentUser"
+    
       - name: Checkout Repository
         uses: actions/checkout@v2
 
