@@ -18,6 +18,8 @@ jobs:
     
       - name: Checkout Repository
         uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.TOKEN_AC_100_COMMITS }}
 
       - name: Set Up Git
         run: |
